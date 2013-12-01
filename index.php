@@ -1,10 +1,11 @@
-3<html>
+<html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 		<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+		<link rel="stylesheet" type="text/css"  href="css/estilo.css" />
 		<script type="text/javascript">
-		damecoordenadas();
+		
 
 
 		function damecoordenadas(){
@@ -169,13 +170,22 @@
         
     }
 
-		initialize('');
+		
 
 		</script>
 	</head>
 	<body>
-
-		<input type="text" id="coordenadas"  value="">
+		<div class="cuadrocentrado">
+			<div id="encabezado">
+				<div id="titulo">
+				 	Donde lo Pongo?
+        		</div>
+        		<div id="slogan">
+        			La mejor manera de Ubicar tu Futuro !!!
+        		</div> 
+				 <img src="img/store.png" alt="negocio" width="150" height="150" id="logo"> 
+			</div>
+		</div>
 		<div id="mapCanvas" style="width: 1100px; height: 800px;"></div>
 	</body>
 </html>
