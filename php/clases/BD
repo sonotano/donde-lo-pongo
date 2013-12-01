@@ -1,0 +1,17 @@
+<?php
+
+class BD{
+	private function conectoBD(){
+		$_con=mysql_connect("localost", "root", ".")  or die($this->msg(0,"Error Conexion BD")); 
+		//$_con=mssql_connect("localhost", "sa", "15101987")  or die($this->msg(0,"Error Conexion BD")); 
+		$dbselected=mysql_select_db("hackaton", $_con) or die($this->msg(0,"Error Conexion BD")); 
+		//mysql_set_charset('utf8');
+		return $_con;
+	}	
+	
+	public function msg($status,$txt)
+	{
+	return '{"status":'.$status.',"txt":"'.$txt.'"}';
+	}
+	
+}//fin de la clase BD
