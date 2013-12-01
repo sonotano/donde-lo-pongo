@@ -1,4 +1,4 @@
-<html>
+3<html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
@@ -20,7 +20,7 @@
 						while(msg[i].Latitud){
 
 
-							console.log("Latitud:"+formatocoordenada(msg[i].Latitud)+"  Longitud:"+formatocoordenada(msg[i].Longitud));
+							//console.log("Latitud:"+formatocoordenada(msg[i].Latitud, "Latitud")+"  Longitud:"+formatocoordenada(msg[i].Longitud, "Longitud"));
 							i++;
 						}
 					}
@@ -28,14 +28,18 @@
 
 		}
 
-	function formatocoordenada(coordenada){
+	function formatocoordenada(coordenada, tipo){
 		str1= "";
 		str2="";
 		str3="";
+		valor = 0;
 		
 		if (coordenada.length == 6) {
+			if (tipo == "Longitud")
+		    alert(coordenada);
 			str1= coordenada.substring(0,2);
 			str2= coordenada.substring(2,4);
+			
 			str3= coordenada.substring(4,6);
 		}
 		
@@ -47,12 +51,21 @@
 		
 		
 		
-/*		console.log(str1);
+		/*console.log(str1);
 		console.log(str2);
-		console.log(str3);
-		console.log((str1+(((str2*60)+(str3))/3600))/100);*/
-		if (coordenada.length == 7) return (str1+(((str2*60)+(str3))/3600))/100;
-		if (coordenada.length == 6) return (str1+(((str2*60)+(str3))/3600))/100;
+		console.log(str3);*/
+		
+		int1 = parseInt(str1);
+		int2 = parseInt(str2); 
+		int3 = parseInt(str3);
+		
+		//console.log(int1+((int2*100)/60/100)+(int3*10000/3600/10000));
+		
+		
+		valor = int1+((int2*100)/60/100)+(int3*10000/3600/10000);
+		if (tipo == "Longitud") valor = valor * -1;
+		
+		return valor;
 
 
 	}
@@ -86,7 +99,7 @@
 							var latLng2 = new google.maps.LatLng(point3, point4);
 							//var latLng = new google.maps.LatLng(29.04347535654008, -110.87468477499988);
 							var map = new google.maps.Map(document.getElementById('mapCanvas'), {
-								zoom: 16,
+								zoom: 10,
 								center: latLng2,
 								mapTypeId: google.maps.MapTypeId.ROADMAP
 							});
@@ -115,15 +128,15 @@
 								
 								var marcador = new google.maps.Marker({
 						
-								position: new google.maps.LatLng(formatocoordenada(msg[i].Longitud), formatocoordenada(msg[i].Latitud)),
+								position: new google.maps.LatLng(formatocoordenada(msg[i].Latitud, "Latitud"), formatocoordenada(msg[i].Longitud, 'Longitud')),
 								map: map
 								});
 								
 								marcadores.push(marcador);
-								console.log("Latitud:"+formatocoordenada(msg[i].Latitud)+"  Longitud:"+formatocoordenada(msg[i].Longitud));
+								//console.log("Latitud:"+formatocoordenada(msg[i].Latitud, "Latitud")+"  Longitud:"+formatocoordenada(msg[i].Longitud, "Longitud"));
 								i++;
 							}
-						debugger;
+						
 						for (var i = 0, length = marcadores.length; i < length; i++) {
 							marcadores[i].setVisible(true);
 						}
@@ -156,7 +169,7 @@
         
     }
 
-
+		initialize('');
 
 		</script>
 	</head>
