@@ -194,20 +194,65 @@
 			<form id="datosusuario" name="datosusuario">
 					<table id="pidedatos">
 						<thead>
-							<th>
+							<tr>
 								<td>
-									Selecciona 
+									A quienes va dirigido? 
 								</td>
-							</th>
+							</tr>
 						</thead>
 						<tbody>
 							<tr>
 								<td>
+									<button class="boton" type="button" style="position:absolute;left:120px;">Ni&ntilde;os</button>
+									<button class="boton" type="button" style="position:absolute;left:230px;">J&oacute;venes</button>
+									<button class="boton" type="button" style="position:absolute;left:360px;">Adultos</button>
 								</td>
 							</tr>
+
 						</tbody>
 					</table>
-					<button onclick="dameresultados()" class="boton" type="button" id="busca">Buscar Localidades</button>
+
+					<table id="pidedatos2">
+						<thead>
+							<tr>
+								<td>
+									G&eacute;nero
+								</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<button class="boton" type="button" style="position:absolute;left:120px;">Masculino</button>
+									
+									<button class="boton" type="button" style="position:absolute;left:350px;">Femenino</button>
+								</td>
+							</tr>
+							
+						</tbody>
+					</table>
+
+
+					<table id="pidedatos3">
+						<thead>
+							<tr>
+								<td>
+									Nivel Socioecon&oacute;mico
+								</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<button class="boton" type="button" style="position:absolute;left:120px;">Baja</button>
+									<button class="boton" type="button" style="position:absolute;left:260px;">Media</button>
+									<button class="boton" type="button" style="position:absolute;left:400px;">Alta</button>
+								</td>
+							</tr>
+							
+						</tbody>
+					</table>
+					<button onclick="initialize('')" class="boton" type="button" id="busca">Buscar Localidades</button>
 			</form>
 			<div id="mapCanvas" ></div>
 		</div>
@@ -347,7 +392,8 @@
 								map: map
 								});
 								marcador.info = new google.maps.InfoWindow({
-								content: '<b>Speed:</b> aaa' + i + ' knots'
+								content: '<b>Nivel socioeconomico:</b> ' + msg[i].NivelSocioeconomico + '<br>' +'<b>Cantiedad de hombres:</b> ' + msg[i].Masculino + '<br>' +'<b>Cantiedad de mujeres:</b> ' + msg[i].Femenino + '<br>' +
+'<b>Porcentaje de niños:</b> ' + msg[i].Ninos + '<br>' +'<b>Porcentaje de adolescentes:</b> ' + msg[i].Adolescentes + '<br>' +'<b>Porcentaje de adultos:</b> ' + msg[i].Adultos + '<br>'
 								});
 
 								google.maps.event.addListener(marcador, 'click', function() {

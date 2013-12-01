@@ -245,8 +245,45 @@ text-shadow:0px 0px 0 rgb(-39,-39,-39),1px 1px 0 rgb(-68,-68,-68),2px 2px 0 rgb(
 
 	width: 600px;
 }
-#pidedatos thead tr td{
+#pidedatos  tr td{
 	text-align: center;
+	font-weight: bold;
+}
+#pidedatos  tr{
+	text-align: center;
+	font-weight: bold;
+}
+
+
+#pidedatos2{
+	position: absolute;
+	top: 175px;
+	right: 0px;
+
+	width: 600px;
+}
+#pidedatos2  tr td{
+	text-align: center;
+	font-weight: bold;
+}
+#pidedatos2  tr{
+	text-align: center;
+	font-weight: bold;
+}
+#pidedatos3{
+	position: absolute;
+	top: 300px;
+	right: 0px;
+
+	width: 600px;
+}
+#pidedatos3  tr td{
+	text-align: center;
+	font-weight: bold;
+}
+#pidedatos3  tr{
+	text-align: center;
+	font-weight: bold;
 }
 /* CSS Document */
 .Three-Dee{
