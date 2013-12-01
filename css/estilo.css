@@ -20,7 +20,6 @@ font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
 .forma{
 	min-height:33px; line-height:33px; border:1px solid #c5c5c5; border-radius:3px; -moz-border-radius:3px; -webkit-border-radius:3px; box-shadow: 0 0 5px rgba(0,0,0,.1), 0 2px 2px rgba(0,0,0,.1) inset; -moz-box-shadow: 0 0 5px rgba(0,0,0,.1), 0 2px 2px rgba(0,0,0,.1) inset; -webkit-box-shadow: 0 0 5px rgba(0,0,0,.1), 0 2px 2px rgba(0,0,0,.1) inset;font-size:12px; width:268px;
 		background:#FFF; box-shadow: 0 0 5px rgba(0,0,0,.1), 0 2px 2px rgba(0,0,0,.1) inset; -moz-box-shadow: 0 0 5px rgba(0,0,0,.1), 0 2px 2px rgba(0,0,0,.1) inset; -webkit-box-shadow: 0 0 5px rgba(0,0,0,.1), 0 2px 2px rgba(0,0,0,.1) inset; border:1px solid #c5c5c5; border-radius:3px; -moz-border-radius:3px; -webkit-border-radius:3px;
-	
 	}
 .forma2{
 	min-height:30px; line-height:15px; border:1px solid #c5c5c5; border-radius:3px; -moz-border-radius:3px; -webkit-border-radius:3px; box-shadow: 0 0 5px rgba(0,0,0,.1), 0 2px 2px rgba(0,0,0,.1) inset; -moz-box-shadow: 0 0 5px rgba(0,0,0,.1), 0 2px 2px rgba(0,0,0,.1) inset; -webkit-box-shadow: 0 0 5px rgba(0,0,0,.1), 0 2px 2px rgba(0,0,0,.1) inset;font-size:12px; width:268px;
@@ -104,13 +103,16 @@ font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
 }
 .titulo {
 	position: relative;
-	width: 100%;
+	width: 1000px;
 	height: 50px;
 	z-index: 2;
-	text-align: right;
+	text-align: center;
 	font-size: 16px;
 	font-weight: bold;
 	color: #000;
+	left: 100px;
+	margin-top: 15px;
+
 }
 
 .cuadrocentrado {
@@ -122,9 +124,21 @@ font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
 }
 .cuadrocentrado2 {
 	position: relative;
-	width: 1000px;
+	width: 1200px;
+
 	z-index: 1;
 	margin: auto;
+	background-image:url(../img/transparente.png);
+	top: 0px;
+	margin-top:10px;
+	border: 3px solid #d5d5d5;
+	border-radius: 20px;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	box-shadow: 0 0 20px rgba(3,44,52,.22);
+	-moz-box-shadow: 0 0 20px rgba(3,44,52,.22);
+	-webkit-box-shadow: 0 0 20px rgba(3,44,52,.22);
+	
 	
 }
 
@@ -208,6 +222,31 @@ font-size: 25px;
 text-shadow:0px 0px 0 rgb(-39,-39,-39),1px 1px 0 rgb(-68,-68,-68),2px 2px 0 rgb(-97,-97,-97), 3px 3px 0 rgb(-126,-126,-126),4px 4px 3px rgba(0,0,0,0.55),4px 4px 1px rgba(0,0,0,0.5),0px 0px 3px rgba(0,0,0,.2);
 
 
+}
+#busca{
+	width: 200px;
+	position: absolute;
+	left: 500px;
+	bottom: 10px;
+
+}
+#mapCanvas{
+	position: relative;
+	width: 600px;
+	height: 600px;
+	background-color: #000;
+	right: 0px;
+	margin-bottom: 80px;
+
+}
+#pidedatos{
+	position: absolute;
+	right: 0px;
+
+	width: 600px;
+}
+#pidedatos thead tr td{
+	text-align: center;
 }
 /* CSS Document */
 .Three-Dee{
